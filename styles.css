@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial;
+
+  /* SAME BACKGROUND FOR ALL PAGES */
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Center layout */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Glass card */
+.login-card {
+  width: 350px;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 10px;
+}
+
+/* Button */
+.btn-login {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  border: none;
+  color: white;
+}
+
+/* Text visibility */
+h2, h3, h4, p {
+  color: black;
+  font-weight: bold;
+}
+
+/* Links */
+a {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* Smooth page fade */
+body {
+  animation: fadeInPage 1s ease-in-out;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Floating card animation */
+.login-card {
+  animation: floatCard 3s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Input focus effect */
+.form-control:focus {
+  box-shadow: 0 0 10px rgba(79,172,254,0.8);
+  border-color: #4facfe;
+}
+
+/* Button animation */
+.btn-login {
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  transform: scale(1.08);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Background zoom effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: url("bg.jpg") no-repeat center center/cover;
+  z-index: -1;
+
+  animation: zoomBg 20s infinite alternate;
+}
+
+@keyframes zoomBg {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
